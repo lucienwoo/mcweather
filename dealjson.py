@@ -3,10 +3,10 @@
 from receiveweather import *
 from weather import *
 from showweather import *
-import simplejson
+import sys,simplejson
 
 #通过城市ID获得API返回的天气信息
-ah=ApiHander('101190401')
+ah=ApiHander(sys.argv[1])
 result=ah.get_weather()
 result_info=ah.get_weather_info()
 
