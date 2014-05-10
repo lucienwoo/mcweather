@@ -2,7 +2,7 @@
 
 class GetCityId:
     def get_id_by_name(self,name):
-        f=open("dealdata.txt")
+        f=open("/home/lucienwoo/project/pythons/mcweather/dealdata.txt")
         t=f.read()
         name_len=len(name)
         i=t.find(name)
