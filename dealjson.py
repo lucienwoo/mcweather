@@ -2,10 +2,9 @@
 #coding=utf-8
 from receiveweather import *
 from weather import *
-from showweather import *
-import sys,simplejson
+import simplejson
 
-def init_apihander(city_id):
+def init_weather(city_id):
   #通过城市ID获得API返回的天气信息
   ah=ApiHander(city_id)
   result=ah.get_weather()
@@ -14,8 +13,6 @@ def init_apihander(city_id):
   #将结果转换为dict类型
   wt_info=simplejson.loads(str(result))
   wt_info_city=simplejson.loads(str(result_info))
-  #print result_obj['weatherinfo']['city']
-  #print type(result_obj)
   wt=wt_info['weatherinfo']
   wt_city=wt_info_city['weatherinfo']
 
@@ -30,7 +27,6 @@ def init_apihander(city_id):
   current_weather.wd=wt['WD']
   current_weather.ws=wt['WS']
   current_weather.sd=wt['SD']
+  current_weather.time=wt['time']
 
-  #print current_weather
-  ws=WeatherShow(current_weather)
-  ws.show()
+  return current_weather

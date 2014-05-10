@@ -19,5 +19,3 @@ class ApiHander:
     def get_weather_info(self):
         return urllib2.urlopen(_API_URL+self.__combine_uri(False)).read()
 
-#ah=ApiHander('101010100')
-#ah.get_weather()

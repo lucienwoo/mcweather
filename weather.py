@@ -14,6 +14,7 @@ class Weather:
         self.wd=''    #风向
         self.ws=''    #风速
         self.sd=''    #湿度
+        self.time=''    #发布时间
 
     def __str__(self):
-        return "city:"+encode(self.city)+" city_id:"+encode(self.city_id)+" weather:"+encode(self.weather)+" temp:"+encode(self.temp)+" temp1:"+encode(self.temp1)+" temp2:"+encode(self.temp2)+" wd:"+encode(self.wd)+" ws:"+encode(self.ws)+" sd:"+encode(self.sd)
+        return "city:"+encode(self.city)+" city_id:"+encode(self.city_id)+" weather:"+encode(self.weather)+" temp:"+encode(self.temp)+" temp1:"+encode(self.temp1)+" temp2:"+encode(self.temp2)+" wd:"+encode(self.wd)+" ws:"+encode(self.ws)+" sd:"+encode(self.sd)+" time:"+encode(self.time)
