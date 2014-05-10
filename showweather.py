@@ -12,4 +12,4 @@ class WeatherShow:
 
 
     def __combine_info(self):
-        return "天气:"+self.weather.weather+"     "+"当前温度:"+self.weather.temp+"\n"+"最低温度:"+self.weather.temp1+"       "+"最高温度:"+self.weather.temp2+"\n"+"风向:"+self.weather.wd+"         "+"风速:"+self.weather.ws+"\n"+"湿度:"+self.weather.sd
+        return "天气:"+self.weather.weather+"\n"+"当前温度:"+self.weather.temp+"\n"+"最低温度:"+self.weather.temp1+"\n"+"最高温度:"+self.weather.temp2+"\n"+"风向:"+self.weather.wd+"\n"+"风速:"+self.weather.ws+"\n"+"湿度:"+self.weather.sd
