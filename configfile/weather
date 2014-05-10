@@ -1,0 +1,21 @@
+#!/usr/bin/python
+#coding=utf-8
+import os,sys,getopt
+
+try:
+    opts,args=getopt.getopt(sys.argv[1:],"n:c:s:",["name=","cityid=","set="])
+except getopt.GetoptError:
+    print "invalid args!!"
+    sys.exit(1)
+
+argv='default'
+flag='1'
+for o,a in opts:
+    argv=a
+    if o in ("-n","--name"):
+        flag='1'
+    if o in ("-c","--cityid"):
+        flag='0'
+    if o in ("-s","--set"):
+        flag='2'
+os.system("python "+os.environ['MC_WEATHER_HOME']+"/main.py "+argv+" "+flag)
